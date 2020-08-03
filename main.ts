@@ -1,12 +1,11 @@
-let TubeTab: number[] = [
-    0x3f, 0x06, 0x5b, 0x4f, 0x66, 0x6d, 0x7d, 0x07,
-    0x7f, 0x6f, 0x77, 0x7c, 0x39, 0x5e, 0x79, 0x71
-]
 /**
  * Display interface for TM1637 chip
  */
-//% weight=10 color=#9F79EE icon="\uf108" block="7-Segment display"
+//%color=#9F79EE icon="\uf108" block="7-Segment display"
 namespace display {
+    let TubeTab: number[] = [
+    0x3f, 0x06, 0x5b, 0x4f, 0x66, 0x6d, 0x7d, 0x07,
+    0x7f, 0x6f, 0x77, 0x7c, 0x39, 0x5e, 0x79, 0x71]
     export enum Jpin_segment {
         //% block="J1 (P13,P14)"
         J1 = 1,
@@ -35,7 +34,6 @@ namespace display {
         display.brightnessLevel = 7
         display.pointFlag = false
         display.clear()
-
         return display
     }
     export class TM1637 {
